@@ -554,7 +554,7 @@
                 <div class="portfolio-layer">
                     <h4>JSON FORM</h4>
                     <p>Fill in your name, age, email, and hobby, then click submit to generate the JSON output.</p>
-                    <a href="https://nardo8.github.io/LazagaJS/" target="_blank"><i class='bx bx-link-external'></i></a> 
+                    <a href="https://nardo8.github.io/JSON/" target="_blank"><i class='bx bx-link-external'></i></a> 
                 </div>
             </div>
             
@@ -594,7 +594,7 @@
     <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <!-- Form with updated structure and name attributes -->
+    
     <form id="contact-form">
         <div class="input-box">
             <input type="text" name="full_name" placeholder="Full Name" required>
@@ -630,38 +630,38 @@
                             });
                         </script>
 
-    
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-    // Initialize EmailJS with your user ID
+    
     (function () {
         emailjs.init("G9bvzZjKkBhPqxcom");
         console.log("EmailJS initialized");
     })();
 
-    // Add event listener to the form
+    
     document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
 
         const form = this;
 
-        // Show a loading message (optional)
+    
         const submitButton = form.querySelector('.btn');
         submitButton.value = 'Sending...';
         submitButton.disabled = true;
 
-        // Send the form data using EmailJS
+
         emailjs.sendForm('service_tde6taa', 'template_kv36bf7', form)
             .then(function () {
                 console.log('Email sent successfully');
                 alert('Message Sent Successfully!');
-                form.reset(); // Reset the form fields after successful submission
+                form.reset(); 
             })
             .catch(function (error) {
                 console.error('Error sending email:', error);
                 alert('Failed to send the message. Please try again later.');
             })
             .finally(function () {
-                // Reset the button to its original state
+    
                 submitButton.value = 'Send Message';
                 submitButton.disabled = false;
             });
