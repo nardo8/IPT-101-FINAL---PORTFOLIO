@@ -634,7 +634,7 @@
 <script>
     
     (function () {
-        emailjs.init("G9bvzZjKkBhPqxcom");
+        emailjs.init("GIejThaQL1y09VYXz");
         console.log("EmailJS initialized");
     })();
 
@@ -644,13 +644,13 @@
 
         const form = this;
 
-    
+        
         const submitButton = form.querySelector('.btn');
         submitButton.value = 'Sending...';
         submitButton.disabled = true;
 
-
-        emailjs.sendForm('service_tde6taa', 'template_kv36bf7', form)
+        
+        emailjs.sendForm('service_adnu3sb', 'template_2z66znf', form)
             .then(function () {
                 console.log('Email sent successfully');
                 alert('Message Sent Successfully!');
@@ -661,12 +661,12 @@
                 alert('Failed to send the message. Please try again later.');
             })
             .finally(function () {
-    
+                
                 submitButton.value = 'Send Message';
                 submitButton.disabled = false;
             });
     });
-</script>                    
+</script>               
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
